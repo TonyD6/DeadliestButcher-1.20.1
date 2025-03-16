@@ -2,6 +2,7 @@ package net.deadlykittens;
 
 import com.mojang.logging.LogUtils;
 import net.deadlykittens.deadliest_butcher.block.ModBlocks;
+import net.deadlykittens.deadliest_butcher.item.ModCreativeModeTabs;
 import net.deadlykittens.deadliest_butcher.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,13 +25,13 @@ public class Deadliest_Butcher {
 
     public Deadliest_Butcher(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-        modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register((modEventBus));
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
 
     }
@@ -41,7 +42,7 @@ public class Deadliest_Butcher {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.DEADPIG);
+            event.accept(ModBlocks.DEADPIG);
         }
     }
 

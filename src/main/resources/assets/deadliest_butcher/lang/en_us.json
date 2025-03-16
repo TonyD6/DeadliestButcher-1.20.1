@@ -1,3 +1,13 @@
 {
-  "item.deadliest_butcher.deadpig": "Pig Carcass"
+  "block.deadliest_butcher.deadpig": "Pig Carcass",
+
+  "item.deadliest_butcher.rawribs": "Raw Ribs",
+  "item.deadliest_butcher.rawprimeribs": "Raw Prime Ribs",
+  "item.deadliest_butcher.rawbrisket": "Raw Brisket",
+  "item.deadliest_butcher.rawloin": "Raw Loin",
+  "item.deadliest_butcher.rawpigsfeet": "Raw Pigs Feet",
+  "item.deadliest_butcher.rawchickenleg": "Raw Chicken Leg",
+  "item.deadliest_butcher.rawchickenwing": "Raw Chicken Wing",
+
+  "creativetab.raw_meats": "Raw Meats"
 }
